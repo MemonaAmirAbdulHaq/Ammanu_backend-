@@ -20,38 +20,7 @@ const transporter = nodemailer.createTransport({
         pass: 'fdzwxqketwmkpzhd',
     },
 });
-// router.post('/forgot-password', async (req, res) => {
-//     const { email } = req.body;
 
-//     try {
-//         const user = await User.findOne({ email });
-//         if (!user) {
-//             return res.status(404).send('User not found');
-//         }
-
-//         const verificationCode = generateVerificationCode();
-//         user.resetPasswordToken = verificationCode;
-//         user.resetPasswordExpires = Date.now() + 3600000; // 1 hour
-//         await user.save();
-
-//         // Send verification email
-//         const mailOptions = {
-//             from: 'amirmemona68@gmail.com',
-//             to: email,
-//             subject: 'Password Reset Verification Code',
-//             text: `Your verification code is: ${verificationCode}`,
-//         };
-
-//         transporter.sendMail(mailOptions, (error, info) => {
-//             if (error) {
-//                 return res.status(500).send(error.toString());
-//             }
-//             res.status(200).send('Verification code sent');
-//         });
-//     } catch (error) {
-//         res.status(500).send(error.toString());                                                                                                 ``
-//     }
-// });
 
 
 
